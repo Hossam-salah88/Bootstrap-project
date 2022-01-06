@@ -1,0 +1,13 @@
+#staticBackdrop {
+  object {
+    height: 88vh;
+  }
+
+  &.fade .modal-dialog {
+    transition: transform 0.5s ease-out;
+    transform: scale(0);
+  }
+  &.show .modal-dialog {
+    transform: none;
+  }
+}

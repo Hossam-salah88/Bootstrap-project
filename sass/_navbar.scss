@@ -1,0 +1,42 @@
+// ================ Nave Bar Link Hover =========================
+
+.navbar-light .navbar-nav .nav-link {
+  position: relative;
+  @media (min-width: 992px) {
+    &::before {
+      content: "";
+      height: 3px;
+      width: 0px;
+      background-color: $blue;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: all 0.3s;
+    }
+  }
+
+  & .active,
+  &:hover {
+    color: $blue;
+
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.navbar-light .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.dropdown-menu {
+  @media (max-width: 992px) {
+    border: none;
+    background: none;
+  }
+  & hr {
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+}

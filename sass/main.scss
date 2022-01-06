@@ -1,0 +1,62 @@
+@import "./variables";
+@import "../scssBootstrap/bootstrap";
+@import "./navbar";
+@import "./home-section";
+@import "./models";
+@import "./progress";
+
+body {
+  font-family: cursive;
+}
+
+.bg-section {
+  background-color: $white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.section-subtitle {
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.slider__section {
+  background: linear-gradient(
+      to right bottom,
+      rgba(139, 139, 139, 0.698),
+      rgba(240, 240, 240, 0.801)
+    ),
+    url(../img/testimonials-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fliter-item {
+  > a {
+    height: 350px;
+
+    &.active {
+      display: block;
+      animation: 0.7s shown ease-in-out;
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+@keyframes shown {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
